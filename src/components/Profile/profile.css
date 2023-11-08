@@ -1,0 +1,101 @@
+#profile{
+    min-height: 100vh;
+     margin: 0 auto;
+    padding: 90px 0;
+    color: black;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.profile-col-1{
+    flex-basis: 35%;
+}
+.profile-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+.profile-col-2{
+    flex-basis: 50%;
+}
+
+h1{
+    font-size: 60px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+p{
+    justify-content: center;
+    font-size: 20px;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-subtitle{
+    margin-right: 50px;
+    font-size: 23px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-subtitle::after{
+    content:'';
+    width:0;
+    height:3px;
+    background-color: #ffffff;
+    transition: 0.5s;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+
+.tab-subtitle.active-link::after{
+    width:50%;    
+}
+
+.tab-contents {
+    display: none;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust the alpha (transparency) value as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow to the container */
+    padding: 20px; /* Add some padding for spacing */
+    border-radius: 10px; /* Add rounded corners for a more container-like appearance */
+    margin-top: 10px; /* Add margin to separate tabs */
+  }
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.tab-contents ul li span{
+    color:blueviolet;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+  }
+  
+  .show {
+    opacity: 1;
+  }

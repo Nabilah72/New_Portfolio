@@ -1,0 +1,64 @@
+#intro{
+    min-height: 100vh;
+    width: 100vw;
+    max-width: fit-content;
+    margin: 0 auto;
+    transition: margin-left 0.5s;
+
+}
+
+.bg{
+    position: absolute;
+    top: -4rem;
+    z-index: -1;
+    object-fit: cover;
+    height: 100vh;
+    right: 0;
+}
+
+.introContent{
+    height: 100vh;
+    width: 100vw;
+    padding: 10rem;
+    font-size: 3rem;
+    font-weight: 700;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+
+}
+
+.hello{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.introName{
+    color:#ff00cc;
+}
+
+.introPara{
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.btn{
+	letter-spacing: 1px;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color:white;
+    background: rgb(0, 0, 0);
+    margin: 1rem 0;
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    box-shadow: 0 2px 2px rgb(0, 0, 0);
+
+}
+
+.btn:hover{
+    background-color: #ff00cc;
+}
+
