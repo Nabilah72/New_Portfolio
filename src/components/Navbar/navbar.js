@@ -1,113 +1,65 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
+import navbar from "../../img/nav_bar.png"
 
 const Navbar = () => {
 
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isActive, setIsActive] = useState(false);
+    const [activeLink, setActiveLink] = useState("intro"); // Set the initial active link
 
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
-
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
+    const handleLinkClick = (link) => {
+        setActiveLink(link);
+        setIsActive(!isActive);
     };
 
     useEffect(() => {
-        const sidebar = document.querySelector(".sidebar_menu");
-        const closeBtn = document.querySelector("#Button");
-        const menuItems = document.querySelectorAll(".Nav_Item li a");
-        const mainContent = document.querySelector("#main"); // Add this line
+        const mainNav = document.getElementById("js-menu");
+        const navBarToggle = document.getElementById("js-navbar-toggle");
 
-        closeBtn.addEventListener("click", () => {
-            sidebar.classList.toggle("open");
-            menuBtnChange();
+        const handleToggleClick = () => {
+            mainNav.classList.toggle("active");
+            setIsActive(!isActive);
+        };
 
-            // Add logic to adjust main content margin
-            if (sidebar.classList.contains("open")) {
-                mainContent.style.marginLeft = "0";
-            } else {
-                mainContent.style.marginLeft = "260px";
-            }
-        });
+        navBarToggle.addEventListener("click", handleToggleClick);
 
-        menuItems.forEach((menuItem) => {
-            menuItem.addEventListener("click", (e) => {
-                e.preventDefault();
+        return () => {
+            // Cleanup event listener on component unmount
+            navBarToggle.removeEventListener("click", handleToggleClick);
+        };
+    }, [isActive]);
 
-                const targetId = menuItem.getAttribute("href").substring(1);
-                const targetSection = document.getElementById(targetId);
-                targetSection.scrollIntoView({
-                    behavior: "smooth",
-                });
-
-                sidebar.classList.remove("open");
-                menuBtnChange();
-
-                menuItems.forEach((item) => {
-                    item.style.backgroundColor = "";
-                });
-                menuItem.style.backgroundColor = "#ff00aa";
-            });
-        });
-
-        function menuBtnChange() {
-            if (sidebar.classList.contains("open")) {
-                closeBtn.classList.replace("bx-menu", "bxs-x-circle");
-            } else {
-                closeBtn.classList.replace("bxs-x-circle", "bx-menu");
-            }
-        }
-    }, []);
     return (
         <section id="main">
-            <div className={`container ${isSidebarOpen ? "sidebar-open" : ""}`}>
-                <div className={`sidebar_menu ${isSidebarOpen ? "open" : ""}`}>
-                    <div className="Logo">
-                        <i className="bx bxl-slack icon"></i>
-                        <div className="Text_Logo">Me, Myself & I</div>
-                        <i className={`bx ${isSidebarOpen ? "bxs-x-circle" : "bx-menu"}`} id="Button" onClick={toggleSidebar}></i>
-                    </div>
-                    <ul className="Nav_Item">
-                        <li>
-                            <i className="bx bx-search"></i>
-                            <input type="text" placeholder="  Search...." />
-                            <span className="Menu_btn">Search</span>
-                        </li>
-                        <li>
-                            <a href="#main" onClick={scrollToTop}>
-                                <i className="bx bxs-home"></i>
-                                <span className="Item_Name">Home</span>
-                            </a>
-                            <span className="Menu_btn">Home</span>
-                        </li>
-                        <li>
-                            <a href="#profile">
-                                <i className="bx bxs-user"></i>
-                                <span className="Item_Name">Profile</span>
-                            </a>
-                            <span className="Menu_btn">Profile</span>
-                        </li>
-                        <li>
-                            <a href="#work">
-                                <i className="bx bxs-briefcase-alt-2"></i>
-                                <span className="Item_Name">Work</span>
-                            </a>
-                            <span className="Menu_btn">Work</span>
-                        </li>
-                        <li>
-                            <a href="#phone">
-                                <i className="bx bxs-phone"></i>
-                                <span className="Item_Name">Contact</span>
-                            </a>
-                            <span className="Menu_btn">Contact</span>
-                        </li>
-                    </ul>
-                </div >
-            </div>
+            <nav className={`navbar ${isActive ? "active" : ""}`}>
+                <span className="navbar-toggle" id="js-navbar-toggle">
+                    <img className="navbar-icon" src={navbar} width="20px" alt="" />
+                </span>
+
+                <a href="#main" className="logo">Me, Myself & I</a>
+                <ul className="main-nav" id="js-menu">
+                    <li>
+                        <a href="#intro" className={`nav-links ${activeLink === "intro" ? "active-link" : ""}`} onClick={() => handleLinkClick("intro")} >
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#profile" className={`nav-links ${activeLink === "profile" ? "active-link" : ""}`} onClick={() => handleLinkClick("profile")}>
+                            Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#work" className={`nav-links ${activeLink === "work" ? "active-link" : ""}`} onClick={() => handleLinkClick("work")}>
+                            Work
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" className={`nav-links ${activeLink === "contact" ? "active-link" : ""}`} onClick={() => handleLinkClick("contact")}>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </section>
     );
 };

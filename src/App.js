@@ -2,6 +2,8 @@ import React from 'react';
 import Intro from './components/Intro/intro';
 import Navbar from './components/Navbar/navbar';
 import Profile from './components/Profile/profile';
+import Work from './components/Work/work';
+import Contact from './components/Contact/contact';
 
 function App() {
 
@@ -10,6 +12,8 @@ function App() {
       <Navbar />
       <Intro />
       <Profile />
+      <Work/>
+      <Contact/>
     </div>
   );
 }

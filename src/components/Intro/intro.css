@@ -1,64 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900');
 #intro{
-    min-height: 100vh;
-    width: 100vw;
-    max-width: fit-content;
-    margin: 0 auto;
-    transition: margin-left 0.5s;
-
+  display: grid;
+  height: 110vh;
+  width: 100%;
+  padding: 2%;
+  /* background: radial-gradient(#778da9, #ececec); */
 }
 
-.bg{
-    position: absolute;
-    top: -4rem;
-    z-index: -1;
-    object-fit: cover;
-    height: 100vh;
-    right: 0;
+.intro-img{
+  display: grid;
+  height: auto;
+  width: 70%;
+  align-items: center;
+  justify-self: center;
 }
 
-.introContent{
-    height: 100vh;
-    width: 100vw;
-    padding: 10rem;
-    font-size: 3rem;
-    font-weight: 700;
-    flex-direction: column;
-    justify-content: center;
-    display: flex;
-
+h3{
+  font-family: 'Playfair Display', serif;
+	font-size: 5vh;
+	font-weight: bolder;
+  color: #374255;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hello{
-    font-size: 2rem;
-    font-weight: 200;
+h4{
+  font-family: 'League Gothic', Arial, Helvetica, sans-serif serif;
+	font-size: 3.5vh;
+	font-weight: bolder;
+  color: #374255;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.introName{
-    color:#ff00cc;
+.resume{
+  color: #ECECEC;
+  border: none;
+  background-color: #374255;
+  margin-top: 30px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px black;
 }
 
-.introPara{
-    font-size: 1.5rem;
-    font-weight: 300;
-    letter-spacing: 1px;
+.resume:hover{
+  cursor: pointer;
+  background-color: #374255;
+  color:#ECECEC;
+  transition: ease-in-out 0.3s;
 }
 
-.btn{
-	letter-spacing: 1px;
-    font-size: 1.0rem;
-    font-weight: 500;
-    color:white;
-    background: rgb(0, 0, 0);
-    margin: 1rem 0;
-    padding: 0.75rem 2rem;
-    border-radius: 2rem;
-    transition: all 0.2s linear;
-    cursor: pointer;
-    box-shadow: 0 2px 2px rgb(0, 0, 0);
+@media screen and (max-width: 1024px){
 
+  .sosmed-list{
+    margin: 0;
+  }
+
+   .intro-img {
+    width: 95%;
+  }
 }
-
-.btn:hover{
-    background-color: #ff00cc;
-}
-
