@@ -1,10 +1,12 @@
-.navbar {
+#main {
   font-weight: bolder;
-  background: linear-gradient(to right, #acbbc6, #374255);
+  background: linear-gradient(to right, #ccc, #778da9);
   padding-bottom: 5px;
   background-size: 200% auto;
+  border-radius: 20px;
   animation: gradientAnimation 8s linear infinite;
-  border-radius:20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  border: 2px solid #ececec;
 }
 
 @keyframes gradientAnimation {
@@ -25,7 +27,6 @@
 }
 
 .main-nav {
-  font-size: 2vh;
   list-style-type: none;
   display: none;
 }

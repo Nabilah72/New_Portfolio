@@ -14,8 +14,8 @@
 }
 
 ::selection{
-	color:#778da9;
-	background-color: white;
+	color:white;
+	background-color: #ccc;
 }
 :before, :after{
 	box-sizing: border-box;

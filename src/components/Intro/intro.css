@@ -34,19 +34,16 @@ h4{
 }
 
 .resume{
-  color: #ECECEC;
-  border: none;
-  background-color: #374255;
+  border:2px solid #778da9;
+  background: linear-gradient(#778da999,white);
   margin-top: 30px;
-  padding: 10px 15px;
+  padding: 10px;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 2px 2px 7px rgb(0, 0, 0, 0.8);
 }
 
 .resume:hover{
   cursor: pointer;
-  background-color: #374255;
-  color:#ECECEC;
   transition: ease-in-out 0.3s;
 }
 

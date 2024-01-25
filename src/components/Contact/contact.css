@@ -21,6 +21,7 @@
 
   /* left contact page */
 .form-horizontal {
+  background: radial-gradient(#778da999,white); 
   width:100%;
   padding: 15px;
   border-radius: 30px;
@@ -47,16 +48,13 @@ textarea.form-control {
 }
 
 .send-button {
+  border:2px solid #778da9;
+  background: linear-gradient(#778da999,white);  
   float: right;
   padding: 10px 20px;
   border-radius: 40px;
-  border: none;
   cursor: pointer;
   box-shadow: 1px 1px 8px black;
-}
-
-.send-button:hover {
-  border: 3px solid #778da9;
 }
 
   /* begin right contact */
@@ -87,7 +85,7 @@ textarea.form-control {
 }
 
 .social-media-list button {
-  background-color: #ececec;
+  background: radial-gradient(white,#778da999);  
   border-radius: 100%;
   font-size: 0px;
   padding: 7px;

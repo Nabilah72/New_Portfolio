@@ -44,7 +44,7 @@
 .tab-contents {
     display: none;
     width: 100%;
-    background-color:white; /* Adjust the alpha (transparency) value as needed */
+    background: radial-gradient(#778da999,white); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow to the container */
     padding: 20px; /* Add some padding for spacing */
     border-radius: 10px; /* Add rounded corners for a more container-like appearance */
