@@ -1,3 +1,4 @@
+import Scroll from "../scroll";
 import React from "react";
 import './intro.css';
 import pdfFile from './Resume_NABILAH.pdf';
@@ -14,7 +15,7 @@ const Intro = () => {
     };
 
     return (
-        <section id="intro">
+        <Scroll id="intro">
             <div className="intro-img">
                 <img className="intro-img" src={profile} alt="Profile" />
             </div>
@@ -28,7 +29,7 @@ const Intro = () => {
                 </div>
             </div>
 
-        </section >
+        </Scroll >
     )
 }
 

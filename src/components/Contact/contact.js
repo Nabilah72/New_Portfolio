@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import './contact.css'
+import React, { useEffect, useState } from 'react';
+import './contact.css';
 
 const Contact = () => {
 
@@ -19,8 +19,8 @@ const Contact = () => {
   // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    // Check for alphabetic characters only for name and title
-    if ((name === 'name' || name === 'title') && !/^[a-zA-Z\s]*$/.test(value)) {
+    // Check for alphabetic characters only for name
+    if ((name === 'name') && !/^[a-zA-Z\s]*$/.test(value)) {
       setValidationErrors({
         ...validationErrors,
         [name]: `${name.charAt(0).toUpperCase() + name.slice(1)} must contain only alphabets.`,
@@ -79,7 +79,8 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <h1 className='contact1'>Get In Touch</h1>
+      <h1>Get In Touch</h1>
+      <p className='sub-para'>Feel free to get in touch! Drop me a message or send an email. I am always available.</p><br/>
       <div className='contact2'>
         <div className="contact3">
           <form id="contact-form" className="form-horizontal" onSubmit={handleSubmit}>
@@ -101,7 +102,7 @@ const Contact = () => {
 
             <div className="form-group">
               <div className="col-sm-12">
-                <input type="text" className={`form-control ${validationErrors.title ? 'is-invalid' : ''}`}
+                <input type="text" className="form-control input-field"
                   id="title" placeholder=" TITLE" name="title" value={formData.title}
                   onChange={handleInputChange} required maxLength={50} />
                 {validationErrors.title && <div className="invalid-feedback">{validationErrors.title}</div>}

@@ -1,0 +1,24 @@
+/* ScrollSection.css */
+.scroll-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .scroll-section.section-appear {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInFromBottom 0.5s ease-out;
+  }
+  
+  @keyframes fadeInFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900');
 #intro{
   display: grid;
-  height: 110vh;
+  height: 100svh;
   width: 100%;
   padding: 2%;
-  /* background: radial-gradient(#778da9, #ececec); */
+}
+
+.intro-1{
+  align-self: center;
 }
 
 .intro-img{
@@ -35,7 +38,7 @@ h4{
 
 .resume{
   border:2px solid #778da9;
-  background: linear-gradient(#778da999,white);
+  background: linear-gradient(white, #778da999);  
   margin-top: 30px;
   padding: 10px;
   border-radius: 20px;

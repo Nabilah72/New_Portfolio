@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './profile.css';
-// import backgroundImg from '../../img/wallpaper.png'
+import Scroll from "../scroll";
 
 const Profile = () => {
     const [activeTab, setActiveTab] = useState('edu');
@@ -8,13 +8,14 @@ const Profile = () => {
         setActiveTab(tab);
     };
     return (
-        <section id="profile" >
+        <Scroll id="profile" >
             <div className="pcontainer">
                 <div className="prow">
                     <div className="profile-col-1">
-                        <h1>About Me</h1><br />
-                        <p className='sub-para'> I am a practical trainee in the field of computer and information sciences at GFIS Sdn. Bhd. in order to experience the workplace environment as well as for self-development.</p>
-                        <br /><br />
+                        <h1>About Me</h1>
+                        <p className='sub-para'>
+                            Hey there! I am a final-year Computer Science diploma student eager to dive into the professional world. I have a passion for coding and problem-solving, and I am excited about contributing to dynamic projects. Let's connect and explore potential opportunities together!</p>
+                        <br />
                         <div className="tab-titles">
                             <p className={`tab-subtitle ${activeTab === 'edu' ? 'p-active-link' : ''}`}
                                 onClick={() => openTab('edu')}>
@@ -75,7 +76,7 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-        </section >
+        </Scroll >
     );
 };
 

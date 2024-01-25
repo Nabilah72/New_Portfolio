@@ -1,12 +1,14 @@
 #main {
+  position: fixed;
   font-weight: bolder;
-  background: linear-gradient(to right, #ccc, #778da9);
-  padding-bottom: 5px;
+  background: linear-gradient(to right, whitesmoke, #778da9,whitesmoke);
   background-size: 200% auto;
   border-radius: 20px;
   animation: gradientAnimation 8s linear infinite;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 7px rgba(0,0,0,0.5);
   border: 2px solid #ececec;
+  width: 100%;
+  z-index: 10;
 }
 
 @keyframes gradientAnimation {
@@ -19,30 +21,31 @@
 }
 
 .navbar-toggle {
-  position: absolute;
-  top: 8px;
-  right: 20px;
   cursor: pointer;
-  font-size: 2.5vh;
+  float: right;
+  margin: 7px 15px;
+  text-align: center;
 }
 
 .main-nav {
+  justify-self: flex-end;
+  width: 100%;
   list-style-type: none;
   display: none;
 }
 
 .nav-links,
 .logo {
-  color: #ececec;
+  color: #374255;
   text-decoration: none;
   position: relative;
 }
 
 .logo {
+  width: 50%;
   display: inline-block;
-  padding: 5px;
-  top:2px;
-  left: 20px;
+  align-items: center;
+  margin: 7px 20px;
 }
 
 .main-nav li {
@@ -56,19 +59,20 @@
 }
 
 .active-link{
-  background: linear-gradient(to right, #ececec, #acbbc6);
-  color: #374255;
-  border-radius: 20px;
-  padding: 10px;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 7px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  padding: 5px 15px;
+  transition: ease-in-out 0.3s;
 }
 
 @media screen and (min-width: 768px) {
   .navbar {
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 0;
-    height: 70px;
+    height: 50px;
     align-items: center;
+    width: 100%;
+
   }
 
   .main-nav {
@@ -92,10 +96,5 @@
 
   .navbar-toggle {
     display: none;
-  }
-
-  .logo:hover,
-  .nav-links:hover {
-    transition: ease-in-out 0.3s;
   }
 }

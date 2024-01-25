@@ -40,22 +40,22 @@ const Navbar = () => {
                 <ul className="main-nav" id="js-menu">
                     <li>
                         <a href="#intro" className={`nav-links ${activeLink === "intro" ? "active-link" : ""}`} onClick={() => handleLinkClick("intro")} >
-                            Home
+                        <i className='bx bx-home-alt-2'></i>
                         </a>
                     </li>
                     <li>
                         <a href="#profile" className={`nav-links ${activeLink === "profile" ? "active-link" : ""}`} onClick={() => handleLinkClick("profile")}>
-                            Profile
+                        <i className='bx bxs-user'></i>
                         </a>
                     </li>
                     <li>
                         <a href="#work" className={`nav-links ${activeLink === "work" ? "active-link" : ""}`} onClick={() => handleLinkClick("work")}>
-                            Work
+                        <i className='bx bx-briefcase'></i>
                         </a>
                     </li>
                     <li>
                         <a href="#contact" className={`nav-links ${activeLink === "contact" ? "active-link" : ""}`} onClick={() => handleLinkClick("contact")}>
-                            Contact
+                        <i className='bx bx-phone'></i>
                         </a>
                     </li>
                 </ul>

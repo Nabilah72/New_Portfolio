@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Scroll from "../scroll";
 import './work.css';
 import workImg1 from '../../img/brochure-img.png';
 import workImg2 from '../../img/portfolio-img.png';
@@ -33,10 +34,9 @@ const Work = () => {
   const transformValue = `translateX(${-currentCard * 100}%)`;
 
   return (
-    <section id="work">
+    <Scroll id="work">
       <h1>My Work</h1>
-      <p className="sub-para">Let's explore a collection of projects I have worked on throughout my career.</p>
-
+      <p className="sub-para">Let's explore a collection of projects I have worked on throughout my career. These demonstrate my skills and achievements. I look forward to discussing them with you.</p><br/>
       <div className="slider">
         <button className="w-prev" onClick={handlePrev}>
           &lt;
@@ -69,7 +69,7 @@ const Work = () => {
           &gt;
         </button>
       </div>
-    </section>
+    </Scroll>
   );
 };
 

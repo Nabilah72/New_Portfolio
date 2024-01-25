@@ -1,6 +1,6 @@
 /* work.css */
 #work {
-  min-height: 100vh;
+  height: 110svh;
   width: 100%;
   padding: 2%;
 }
@@ -29,11 +29,11 @@
   border:2px solid #778da9;
   z-index: 1;
   margin-right: -3%;
-  max-height: auto;
-  max-width: 35%;
+  height: auto;
+  width: 50%;
   border-radius: 20px;
   transition: transform 0.3s ease-in-out;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 8px rgb(0, 0, 0, 0.8);
 }
 
 .card-info {
@@ -42,7 +42,7 @@
   width: 40%;
   border-radius: 20px;
   background: linear-gradient(#778da999,white); 
-  box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 8px rgb(0, 0, 0, 0.8);
 }
 
 .link-button{
@@ -51,7 +51,7 @@
   padding: 8px;
   border-radius: 20px;
   border:2px solid #778da9;
-  background: linear-gradient(#778da999,white); 
+  background: linear-gradient(white, #778da999);  
   cursor: pointer;
   box-shadow: 2px 2px 7px rgb(0, 0, 0, 0.8);
 }
@@ -118,11 +118,12 @@ h5::after{
 }
 
 @media screen and (max-width: 1024px){
-    .slider{
-      justify-content: center;
-      margin: auto;
-      align-items: center;
-    }
+  .slider{
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+  }
+
   .w-card {
     display: flex;
     flex-direction: column;
@@ -130,19 +131,19 @@ h5::after{
   }
   
   .cards {
-    width: 85%; /* Make the cards take full width on smaller screens */
+    width: 100%;
   }
 
   .w-card img {
     margin-right: 0px;
     margin-bottom: -5%;
     max-height: auto;
-    max-width: 80%;
+    width: 75%;
   }
 
   .card-info {
-    padding: 5%;
-    width: 75%;
+    padding: 10% 0;
+    width: 85%;
   }  
 
   h5 {
