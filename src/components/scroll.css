@@ -2,13 +2,13 @@
 .scroll-section {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   
   .scroll-section.section-appear {
     opacity: 1;
     transform: translateY(0);
-    animation: fadeInFromBottom 0.5s ease-out;
+    animation: fadeInFromBottom 0.8s ease-out;
   }
   
   @keyframes fadeInFromBottom {

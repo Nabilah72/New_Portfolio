@@ -40,22 +40,22 @@ const Navbar = () => {
                 <ul className="main-nav" id="js-menu">
                     <li>
                         <a href="#intro" className={`nav-links ${activeLink === "intro" ? "active-link" : ""}`} onClick={() => handleLinkClick("intro")} >
-                        <i className='bx bx-home-alt-2'></i>
+                        <i className='bx bx-home-alt-2'></i> Home
                         </a>
                     </li>
                     <li>
                         <a href="#profile" className={`nav-links ${activeLink === "profile" ? "active-link" : ""}`} onClick={() => handleLinkClick("profile")}>
-                        <i className='bx bxs-user'></i>
+                        <i className='bx bxs-user'></i> Profile
                         </a>
                     </li>
                     <li>
                         <a href="#work" className={`nav-links ${activeLink === "work" ? "active-link" : ""}`} onClick={() => handleLinkClick("work")}>
-                        <i className='bx bx-briefcase'></i>
+                        <i className='bx bx-briefcase'></i> Work
                         </a>
                     </li>
                     <li>
                         <a href="#contact" className={`nav-links ${activeLink === "contact" ? "active-link" : ""}`} onClick={() => handleLinkClick("contact")}>
-                        <i className='bx bx-phone'></i>
+                        <i className='bx bx-phone'></i> Contact
                         </a>
                     </li>
                 </ul>

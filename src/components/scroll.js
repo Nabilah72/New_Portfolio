@@ -27,7 +27,7 @@ const Scroll = ({ id, children }) => {
     }, [id, sectionVisible]);
 
     return (
-        <Link to={id} smooth={true} duration={500}>
+        <Link to={id} smooth={true} duration={800}>
             <section id={id} className={`scroll-section ${sectionVisible ? 'section-appear' : ''}`}>
                 {children}
             </section>
