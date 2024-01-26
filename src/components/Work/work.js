@@ -7,7 +7,7 @@ import workImg3 from '../../img/photobooth-img.png';
 // import workImg4 from '../../img/cat.jpg';
 
 const projectData = [
-  { image: workImg1, title: 'DIGITAL BROCHURE', info: 'I crafted a company brochure for Asia Navigator 2024 using Reveal.Js. After creating a detailed plan and converting it to code, I deployed it on GitHub and Netlify. Additionally, I designed event buntings with Canva and AI images using Bing AI.', code: 'https://github.com/Nabilah72/Brochure', view: 'https://bella-gfis-brochure.netlify.app/' },
+  { image: workImg1, title: 'DIGITAL BROCHURE', info: 'I crafted a company brochure for Asia Navigator 2024 using Reveal.Js. After creating a detailed plan and converting it to code, I deployed it on GitHub and Netlify. Additionally, I designed event buntings with Canva and AI images using Bing AI.', code: 'https://github.com/Nabilah72/New-Brochure', view: 'https://brochure2024.netlify.app/' },
   { image: workImg2, title: 'PORTFOLIO WEBSITE', info: 'This project is my professional showcase, demonstrating skills for job opportunities. It reflects my commitment to growth in web development, leaving a lasting impression.', code: 'https://github.com/Nabilah72/New_Portfolio', view: 'https://portfolio-72.netlify.app/' },
   { image: workImg3, title: 'PHOTOBOOTH APP', info: 'I made a photo booth app for a Family Day event on November 11, 2023. I added some features and functions to capture the beauty of the picture and keep it as a memory.', code: 'https://github.com/Nabilah72/Photobooth-App', view: 'https://photoboothapp.netlify.app/' },
   // { image: workImg4, title: '', info: 'text4', code: 'link', view: '' },
