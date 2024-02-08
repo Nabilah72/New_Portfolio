@@ -48,8 +48,8 @@ const Profile = () => {
 
                                 <li><span>Computer Skills</span><br />Javascript<br />HTML<br />CSS<br />React<br />C++</li>
                                 <br />
-                                <li><span>Soft Skills</span><br />Able to contribute to group projects and share responsibilities within a team.
-                                    <br />Flexibility to adjust to new situations and environments<br />Prioritizing tasks based on urgency and importance.</li>
+                                <li><span>Soft Skills</span><br />1. Able to contribute to group projects and share responsibilities within a team.
+                                    <br />2. Flexibility to adjust to new situations and environments<br />3. Prioritizing tasks based on urgency and importance.</li>
                                 <br />
                                 <li><span>Language Proficiency</span><br />Malay<br />English</li>
                             </ul>
@@ -57,20 +57,17 @@ const Profile = () => {
 
                         <div className={`tab-contents ${activeTab === 'exp' ? 'active-tab' : ''}`} id="exp">
                             <ul>
-                                <div className='box'>
-                                    <h2>18 Sept 2023 - 01 March 2024</h2>
-                                    <li><span>Cyberjaya, Selangor<br />Internship at GFIS Innovative Solutions Sdn Bhd</span><br /></li>
-                                    <br />
-                                </div>
-                                <div className='box'>
-                                    <h2>08 April 2023</h2>
-                                    <li><span>Kangar, Perlis<br />The director of We Are One 2023 charity event, COSMITs</span></li>
-                                    <br />
-                                </div>
-                                {/* <div className='box'>
-                                    <h2>Year</h2>
-                                    <li><span>Title3</span><br />desc3</li>
-                                </div> */}
+                                <h2>18 Sept 2023 - 01 March 2024</h2>
+                                <li><span>Cyberjaya, Selangor</span><br />Internship at GFIS Innovative Solutions Sdn Bhd<br /></li>
+                                <br />
+
+                                <h2>29 - 31 Jan 2024</h2>
+                                <li><span>Sheraton Imperial Hotel, Kuala Lumpur</span><br />Participate in the registration committee for Asia Navigator 2024</li>
+                                <br />
+
+                                <h2>08 April 2023</h2>
+                                <li><span>Kangar, Perlis</span><br />The director of We Are One 2023 charity event, COSMITs</li>
+                                <br />
                             </ul>
                         </div>
                     </div>

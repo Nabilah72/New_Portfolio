@@ -53,16 +53,18 @@
 
 h2{
     font-weight: bolder;
+    color: #778da9;
+
 }
 
 .tab-contents ul li{
-    list-style: none;
     color: #374255;
     margin: 10px 0;
 }
 
 .tab-contents ul li span{
-    color: #778da9;
+    font-style:italic;
+    font-weight: bolder;
 }
 
 .tab-contents.active-tab{

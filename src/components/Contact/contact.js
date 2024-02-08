@@ -1,88 +1,82 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './contact.css';
 
 const Contact = () => {
 
-  // State to hold the form values
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    title: '',
-    message: '',
-  });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   title: '',
+  //   message: '',
+  // });
 
-  const [validationErrors, setValidationErrors] = useState({});
-  const [successMessage, setSuccessMessage] = useState('');
-  const [warningMessage, setWarningMessage] = useState('');
-  const [isMessageSent, setIsMessageSent] = useState(false);
+  // const [validationErrors, setValidationErrors] = useState({});
+  // const [successMessage, setSuccessMessage] = useState('');
+  // const [warningMessage, setWarningMessage] = useState('');
+  // const [isMessageSent, setIsMessageSent] = useState(false);
 
-  // Handle input changes
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    // Check for alphabetic characters only for name
-    if ((name === 'name') && !/^[a-zA-Z\s]*$/.test(value)) {
-      setValidationErrors({
-        ...validationErrors,
-        [name]: `${name.charAt(0).toUpperCase() + name.slice(1)} must contain only alphabets.`,
-      });
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   if ((name === 'name') && !/^[a-zA-Z\s]*$/.test(value)) {
+  //     setValidationErrors({
+  //       ...validationErrors,
+  //       [name]: `${name.charAt(0).toUpperCase() + name.slice(1)} must contain only alphabets.`,
+  //     });
 
-    } else {
-      setValidationErrors({
-        ...validationErrors,
-        [name]: '',
-      });
-    }
+  //   } else {
+  //     setValidationErrors({
+  //       ...validationErrors,
+  //       [name]: '',
+  //     });
+  //   }
 
-    const uppercaseValue = name === 'title' ? value.toUpperCase() : value;
-    setFormData({
-      ...formData,
-      [name]: uppercaseValue,
-    });
-  };
+  //   const uppercaseValue = name === 'title' ? value.toUpperCase() : value;
+  //   setFormData({
+  //     ...formData,
+  //     [name]: uppercaseValue,
+  //   });
+  // };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (Object.values(validationErrors).every((error) => !error) &&
-      Object.values(formData).every((value) => value.trim() !== '')) {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (Object.values(validationErrors).every((error) => !error) &&
+  //     Object.values(formData).every((value) => value.trim() !== '')) {
 
-      setSuccessMessage('The form submitted successfully !');
-      setWarningMessage('');
+  //     setSuccessMessage('The form submitted successfully !');
+  //     setWarningMessage('');
 
-      // Reset the form values after submission
-      setFormData({
-        name: '',
-        email: '',
-        title: '',
-        message: '',
-      });
-      setIsMessageSent(true);
+  //     setFormData({
+  //       name: '',
+  //       email: '',
+  //       title: '',
+  //       message: '',
+  //     });
+  //     setIsMessageSent(true);
 
-      setTimeout(() => {
-        setIsMessageSent(false);
-      }, 5000);
+  //     setTimeout(() => {
+  //       setIsMessageSent(false);
+  //     }, 5000);
 
-    } else {
-      setWarningMessage('Fix validation errors before submitting.');
-      setSuccessMessage(''); // Clear any existing success messages    }
-    }
-  };
+  //   } else {
+  //     setWarningMessage('Fix validation errors before submitting.');
+  //     setSuccessMessage(''); 
+  //   }
+  // };
 
-  useEffect(() => {
-    const clearMessages = setTimeout(() => {
-      setSuccessMessage('');
-      setWarningMessage('');
-    }, 5000);
+  // useEffect(() => {
+  //   const clearMessages = setTimeout(() => {
+  //     setSuccessMessage('');
+  //     setWarningMessage('');
+  //   }, 5000);
 
-    return () => clearTimeout(clearMessages);
-  }, [successMessage, warningMessage]);
+  //   return () => clearTimeout(clearMessages);
+  // }, [successMessage, warningMessage]);
 
   return (
     <section id="contact">
       <h1>Get In Touch</h1>
       <p className='sub-para'>Feel free to get in touch! Drop me a message or send an email. I am always available.</p><br/>
-      <div className='contact2'>
-        <div className="contact3">
+        {/* <div className="contact3">
           <form id="contact-form" className="form-horizontal" onSubmit={handleSubmit}>
             <div className="form-group">
               <div className="col-sm-12">
@@ -125,13 +119,12 @@ const Contact = () => {
             </div>
           )}
 
-          {/* Display success message */}
           {successMessage && (
             <div className="success-message">
               {successMessage}
             </div>
           )}
-        </div>
+        </div> */}
 
         <div className="contact4">
           <ul className="phone-list">
@@ -139,7 +132,7 @@ const Contact = () => {
             <li className="list-item"><i className='bx bx-phone' ><span className="phone-text phone">+60 12-3456789</span></i></li>
             <li className="list-item"><i className='bx bxs-envelope' ><span className="phone-text gmail">nabilah123@gmail.com</span></i></li>
           </ul>
-          <p className='small-text'>For more information, <br />do follow me on social media.</p>
+          <p className='small-text'><br/>For more information, do follow me on social media.</p>
           <ul className="social-media-list">
             <li>
               <a href="https://github.com/Nabilah72" target="_blank" rel="noopener noreferrer">
@@ -166,7 +159,6 @@ const Contact = () => {
           </ul >
           <div className="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
         </div >
-      </div>
     </section >
   )
 }
