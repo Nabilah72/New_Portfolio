@@ -1,11 +1,17 @@
 #profile{
-    height: 110vh;
+    min-height: 100vh;
     width: 100%;
     padding: 2%;
 }
 
+.icon{
+    font-size: 40px;
+    align-items: center;
+}
+
 .p{
     text-align: justify;
+    align-self: center;
     justify-content: center;
     display: flex;
 }

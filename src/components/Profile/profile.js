@@ -32,7 +32,7 @@ const Profile = () => {
                         </div>
                         <div className={`tab-contents ${activeTab === 'edu' ? 'active-tab' : ''}`} id="edu">
                             <ul>
-                                <h2>Oct 2021 - Now</h2>
+                                <h2>Oct 2021 - March 2024</h2>
                                 <li><span>Diploma In Computer Science</span><br />Dean List<br />Universiti Teknologi MARA (UiTM), Arau, Perlis</li>
                                 <br />
                                 <h2>Jan 2019 - March 2021</h2>
@@ -46,7 +46,10 @@ const Profile = () => {
                         <div className={`tab-contents ${activeTab === 'ski' ? 'active-tab' : ''}`} id="ski">
                             <ul>
 
-                                <li><span>Computer Skills</span><br />Javascript<br />HTML<br />CSS<br />React<br />C++</li>
+                                <li><span>Programming Skills</span><br /><br /><i className='bx bxl-javascript icon' style={{ color: '#f2dc55' }}></i>
+                                    <i className='bx bxl-html5 icon' style={{ color: '#dd4b25' }} ></i><i className='bx bxl-css3 icon' style={{ color: '#1b6fb4' }}></i><i className='bx bxl-c-plus-plus icon' style={{ color: '#0984cf' }}  ></i><i className='bx bxl-bootstrap icon' style={{ color: '#8512f7' }}  ></i></li>
+                                <br />
+                                <li><span>Software Skills</span><br />Canva <br />Microsoft Bing<br />Microsoft Word<br />Image Upscaler<br />Adobe Photoshop</li>
                                 <br />
                                 <li><span>Soft Skills</span><br />1. Able to contribute to group projects and share responsibilities within a team.
                                     <br />2. Flexibility to adjust to new situations and environments<br />3. Prioritizing tasks based on urgency and importance.</li>
@@ -57,14 +60,12 @@ const Profile = () => {
 
                         <div className={`tab-contents ${activeTab === 'exp' ? 'active-tab' : ''}`} id="exp">
                             <ul>
+                                <h2>30 & 31 Jan 2024</h2>
+                                <li><span>Sheraton Imperial Hotel, Kuala Lumpur</span><br />Participate in the registration committee for Asia Navigator 2024</li>
+                                <br />
                                 <h2>18 Sept 2023 - 01 March 2024</h2>
                                 <li><span>Cyberjaya, Selangor</span><br />Internship at GFIS Innovative Solutions Sdn Bhd<br /></li>
                                 <br />
-
-                                <h2>29 - 31 Jan 2024</h2>
-                                <li><span>Sheraton Imperial Hotel, Kuala Lumpur</span><br />Participate in the registration committee for Asia Navigator 2024</li>
-                                <br />
-
                                 <h2>08 April 2023</h2>
                                 <li><span>Kangar, Perlis</span><br />The director of We Are One 2023 charity event, COSMITs</li>
                                 <br />
