@@ -64,10 +64,13 @@ const Profile = () => {
                                 <li><span>Sheraton Imperial Hotel, Kuala Lumpur</span><br />Participate in the registration committee for Asia Navigator 2024</li>
                                 <br />
                                 <h2>18 Sept 2023 - 01 March 2024</h2>
-                                <li><span>Cyberjaya, Selangor</span><br />Internship at GFIS Innovative Solutions Sdn Bhd<br /></li>
+                                <li><span>Cyberjaya, Selangor</span><br />Internship as Associate Software Engineer at GFIS Innovative Solutions Sdn Bhd<br /></li>
                                 <br />
                                 <h2>08 April 2023</h2>
-                                <li><span>Kangar, Perlis</span><br />The director of We Are One 2023 charity event, COSMITs</li>
+                                <li><span>Padang Katong, Kangar, Perlis</span><br />The director of We Are One programme, a charity event under the COSMITs</li>
+                                <br />
+                                <h2>24 July 2022</h2>
+                                <li><span>Uitm Arau, Perlis</span><br />The Deputy Secretary of COSMITs under the College of Computing, Informatics and Mathematics.</li>
                                 <br />
                             </ul>
                         </div>
